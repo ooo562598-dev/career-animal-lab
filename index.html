@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff6f61" />
+    <meta
+      name="description"
+      content="30 道日常小题，测测你是哪一种猫咪人格。仅供快乐参考。"
+    />
+    <title>今日份猫塑报告 · 猫咪人格测试</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <main class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="回到首页">
+          <span class="brand-mark">🐾</span>
+          <span>猫塑研究所</span>
+        </a>
+        <span class="header-tag">NO. 042 · 仅供快乐</span>
+      </header>
+
+      <section class="panel intro-panel view is-active" id="intro-view" aria-labelledby="main-title">
+        <div class="sticker sticker-top">今日宜：做自己</div>
+        <p class="eyebrow"><span></span> DAILY CAT CHECK <span></span></p>
+        <div class="hero-cat" aria-hidden="true">
+          <div class="cat-ear ear-left"></div>
+          <div class="cat-ear ear-right"></div>
+          <div class="cat-face">
+            <i class="eye eye-left"></i><i class="eye eye-right"></i>
+            <i class="nose"></i>
+            <i class="whisker w1"></i><i class="whisker w2"></i>
+            <i class="whisker w3"></i><i class="whisker w4"></i>
+          </div>
+          <div class="sparkle sparkle-one">✦</div>
+          <div class="sparkle sparkle-two">✦</div>
+        </div>
+        <h1 id="main-title">你这人吧，<br /><em>有点像一只猫。</em></h1>
+        <p class="intro-copy">30 道生活小题，扒拉一下你的猫咪出厂设置。<br />不算命、不诊断，<b>只负责把你可爱地说出来。</b></p>
+        <button class="primary-button" id="start-button" type="button">
+          <span>开始被猫塑</span><b>→</b>
+        </button>
+        <p class="tiny-note">约 3 分钟 · 凭第一反应作答 · 结果会很有画面</p>
+        <div class="floating-label label-left">不用端着</div>
+        <div class="floating-label label-right">喵言喵语</div>
+      </section>
+
+      <section class="panel quiz-panel view" id="quiz-view" aria-live="polite" aria-labelledby="question-title">
+        <div class="quiz-topbar">
+          <button class="back-button" id="back-button" type="button" aria-label="上一题">←</button>
+          <div class="progress-wrap">
+            <div class="progress-meta"><span id="question-count">01 / 30</span><span id="progress-text">刚进猫门</span></div>
+            <div class="progress-track"><div class="progress-value" id="progress-value"></div></div>
+          </div>
+          <span class="paws" aria-hidden="true">🐾</span>
+        </div>
+        <div class="question-card" id="question-card">
+          <div class="question-number" id="question-number">Q01</div>
+          <h2 id="question-title"></h2>
+          <p class="question-hint">第一反应，别让理智开会。</p>
+          <div class="options" id="options" role="radiogroup" aria-label="答案选项"></div>
+        </div>
+      </section>
+
+      <section class="panel result-panel view" id="result-view" aria-labelledby="result-title">
+        <div class="result-topline"><span>你的猫塑报告已送达</span><i></i><span>请查收</span></div>
+        <div class="result-badge" id="result-badge">MOOD: 软乎乎</div>
+        <div class="result-cat" id="result-cat" aria-hidden="true">🐈</div>
+        <p class="result-kicker">你是</p>
+        <h2 id="result-title">一只猫咪</h2>
+        <p class="result-subtitle" id="result-subtitle"></p>
+        <div class="result-card">
+          <span class="quote-mark">“</span>
+          <p id="result-description"></p>
+        </div>
+        <div class="tip-section">
+          <p class="section-label">给这只猫的投喂建议</p>
+          <ul id="result-tips"></ul>
+        </div>
+        <div class="mix-section">
+          <div class="mix-heading"><span>你的猫咪配方</span><small>偶尔串台也很正常</small></div>
+          <div id="mix-bars"></div>
+        </div>
+        <div class="result-actions">
+          <button class="secondary-button" id="restart-button" type="button">再测一次 ↻</button>
+          <button class="primary-button compact" id="share-button" type="button">复制我的报告</button>
+        </div>
+        <p class="share-status" id="share-status" role="status"></p>
+      </section>
+    </main>
+    <footer>本测试由 <b>摸鱼星球猫塑分部</b> 友情提供 · 你本来就很好</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
