@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff6f61" />
+    <meta
+      name="description"
+      content="创业动物研究所：30道趣味情境题、六种RIASEC动物角色和可互动职业星图。仅供职业兴趣探索。"
+    />
+    <title>创业动物研究所 · 发现你的职业兴趣</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <main class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" id="home-link" aria-label="回到首页，保留当前进度">
+          <span class="brand-mark">🐾</span>
+          <span>创业动物研究所</span>
+        </a>
+        <span class="header-tag">课堂体验 · 探索中</span>
+      </header>
+
+      <section class="panel intro-panel view is-active" id="intro-view" aria-labelledby="main-title">
+        <div class="sticker sticker-top">今日宜：发现可能</div>
+        <p class="eyebrow"><span></span> 小动物，大可能 <span></span></p>
+        <div class="hero-cat" aria-hidden="true">
+          <div class="cat-ear ear-left"></div>
+          <div class="cat-ear ear-right"></div>
+          <div class="cat-face">
+            <i class="eye eye-left"></i><i class="eye eye-right"></i>
+            <i class="nose"></i>
+            <i class="whisker w1"></i><i class="whisker w2"></i>
+            <i class="whisker w3"></i><i class="whisker w4"></i>
+          </div>
+          <div class="sparkle sparkle-one">✦</div>
+          <div class="sparkle sparkle-two">✦</div>
+        </div>
+        <h1 id="main-title" tabindex="-1">未来的你，<br /><em>是哪只职业小动物？</em></h1>
+        <p class="intro-copy">测测你的创新创业人格，<br />看看未来的你会是什么职业小动物！<br /><b>30 个小情境，发现你想做的事。</b></p>
+        <div class="animal-roll" id="animal-roll" aria-label="六位研究所成员"></div>
+        <button class="primary-button" id="start-button" type="button">
+          <span>领取我的动物身份</span><b>→</b>
+        </button>
+        <p class="tiny-note">约 3–5 分钟 · 没有标准答案 · 不必已经会做</p>
+        <p class="save-note" id="save-note" role="status"></p>
+        <div class="floating-label label-left">兴趣先行</div>
+        <div class="floating-label label-right">猫猫也上班？</div>
+        <p class="intro-disclaimer">课堂趣味改编 · 尚未完成测量验证<br />仅供职业兴趣探索，不是能力诊断。</p>
+        <a class="notice-link" href="modifications.html">改编与免责声明 / Modifications and disclaimers</a>
+        <p class="license-launch">来源：美国劳工部 USDOL/ETA 的 <a href="https://www.onetcenter.org/IP.html" target="_blank" rel="noopener">O*NET® Career Exploration Tools</a>；按 <a href="https://www.onetcenter.org/license_toolsdev.html" target="_blank" rel="noopener">Tools Developer License</a> 改编。创业动物研究所修改了题目、计分展示与职业连接；USDOL/ETA 未批准、背书或测试这些改动。O*NET® 是 USDOL/ETA 的商标。</p>
+      </section>
+
+      <section class="panel quiz-panel view" id="quiz-view" aria-live="polite" aria-labelledby="question-title">
+        <div class="quiz-topbar">
+          <button class="back-button" id="back-button" type="button" aria-label="上一题">←</button>
+          <div class="progress-wrap">
+            <div class="progress-meta"><span id="question-count">01 / 30</span><span id="progress-text">推开研究所的门</span></div>
+            <div class="progress-track" id="progress-track" role="progressbar" aria-label="答题进度" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"><div class="progress-value" id="progress-value"></div></div>
+          </div>
+          <span class="paws" aria-hidden="true">🐾</span>
+        </div>
+        <div class="question-card" id="question-card">
+          <div class="question-number" id="question-number">Q01</div>
+          <p class="question-prompt">如果有机会做这件事，你会有多喜欢？</p>
+          <h2 id="question-title" tabindex="-1"></h2>
+          <p class="question-hint">选的是喜欢程度，不是会不会。凭第一反应就好。</p>
+          <div class="options" id="options" role="group" aria-label="选择兴趣程度，选后自动进入下一题"></div>
+          <p class="quiz-note">答题进度仅保存在这台设备，可返回上一题修改。</p>
+        </div>
+      </section>
+
+      <section class="panel result-panel view" id="result-view" aria-labelledby="result-title">
+        <div class="result-topline"><span>你的动物探索报告已送达</span><i></i><span>请查收</span></div>
+        <div class="result-badge" id="result-badge"></div>
+        <div class="result-cat" id="result-cat"></div>
+        <p class="result-kicker">这次先和它认识一下</p>
+        <h2 id="result-title" tabindex="-1"></h2>
+        <p class="result-subtitle" id="result-subtitle"></p>
+        <div class="result-card">
+          <span class="quote-mark">“</span>
+          <p id="result-description"></p>
+        </div>
+        <div class="keywords" id="result-keywords"></div>
+        <p class="team-role" id="team-role"></p>
+        <p class="tie-note" id="tie-note"></p>
+        <div class="tip-section">
+          <p class="section-label">给这只小动物的探索任务</p>
+          <ul id="result-tips"></ul>
+        </div>
+        <div class="mix-section">
+          <div class="mix-heading"><span>你的兴趣伙伴</span><small>你可以同时喜欢很多事</small></div>
+          <div id="mix-bars" class="interest-pills"></div>
+          <details class="scoring-note"><summary>并列时，动物怎么选？</summary><p>先比较六类的总兴趣；同分时依次比较“非常喜欢”和“比较喜欢”的次数，仍相同按 R、I、A、S、E、C 固定顺序先展示。所有同最高分的兴趣都会标出，前三项及第三名的同分项都能继续探索。这是展示规则，不代表能力差异。若各类都低于“一般”，会提示暂未发现明显吸引你的活动。</p></details>
+        </div>
+        <section class="career-section" aria-labelledby="map-title">
+          <div class="section-heading"><span class="small-sticker">下一站，看看可能</span><h3 id="map-title" tabindex="-1">你的职业星图</h3><p>点一颗职业星星，看看小动物上班的样子。</p></div>
+          <div class="map-switch" id="map-switch" role="group" aria-label="探索不同兴趣的职业"></div>
+          <p class="map-caption" id="map-caption"></p>
+          <div class="career-map" id="career-map">
+            <svg class="map-lines" viewBox="0 0 600 560" preserveAspectRatio="none" aria-hidden="true" id="map-lines"></svg>
+            <div class="map-orbit orbit-one" aria-hidden="true"></div><div class="map-orbit orbit-two" aria-hidden="true"></div>
+            <div class="map-center" id="map-center"></div>
+            <div id="career-nodes"></div>
+          </div>
+          <p class="explore-note">职业是探索起点，不是录用通知。兴趣不等于能力，也不限制你的选择。</p>
+        </section>
+        <section class="career-detail" id="career-detail" aria-labelledby="career-title" hidden>
+          <p class="scene-kicker" id="career-animal"></p><h3 id="career-title" tabindex="-1"></h3>
+          <div id="career-art"></div><p class="career-intro" id="career-intro"></p>
+          <dl class="career-facts"><dt>平时做什么</dt><dd id="career-work"></dd><dt>可以从这里开始</dt><dd id="career-learn"></dd></dl>
+          <p class="career-reference" id="career-reference"></p>
+          <div class="career-actions"><button class="secondary-button" id="return-map" type="button">返回职业图谱</button><button class="secondary-button" id="next-career" type="button">换一个职业</button></div>
+        </section>
+        <div class="result-actions">
+          <button class="secondary-button" id="restart-button" type="button">再测一次 ↻</button>
+          <button class="primary-button compact" id="share-button" type="button">复制我的报告</button>
+        </div>
+        <p class="share-status" id="share-status" role="status"></p>
+        <label class="copy-fallback" id="copy-fallback" hidden>可以选中并手动复制报告<textarea id="report-text" readonly rows="7"></textarea></label>
+      </section>
+    </main>
+    <footer><b>创业动物研究所</b> · 未来不止一种可爱<br />本测试参考霍兰德 RIASEC 职业兴趣理论及 O*NET® Interest Profiler 的测量框架，题目经趣味化改编，仅供职业兴趣探索，不属于官方标准化测评。<br /><a href="modifications.html">来源、许可、改编与验证说明</a> · <a href="https://onetinterestprofiler.org/" target="_blank" rel="noopener">了解官方原版</a></footer>
+    <script src="data.js"></script>
+    <script src="illustrations.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
